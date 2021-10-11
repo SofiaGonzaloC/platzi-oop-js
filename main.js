@@ -72,3 +72,4 @@ const jose = new  student3({
         "Creación de videojuegos"
     ]
 })
+console.groupEnd()
