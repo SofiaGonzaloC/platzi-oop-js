@@ -1,9 +1,9 @@
 class learningPath{
     constructor({
         name,
-        cursos
+        courses = []
     }){
         this.name = name;
-        this.cursos = cursos;
+        this.courses = courses;
     }
 }
