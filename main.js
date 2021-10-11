@@ -1,77 +1,36 @@
-// De la clase 5 y 6
+import student from './student.js'
+import learningPath from './learningPath.js'
 
-const natalia = {
-    name: "Natalia",
-    age: 20,
-    cursosAprobados: [
-        "HTML y CSS definitivo",
-        "HTML y CSS práctico",
-    ],
-    aprobarCurso(curso) {
-        // this hace referencia al objeto "Natalia"
-        this.cursosAprobados.push(curso)
-    }
-}
+// Students
+const juan = new student({
+    name: "JuanDC",
+    username: "juandc",
+    email: "juan@mail.com",
+    twitter: "fjuandc"
+})
 
-console.group("Prototipo con la sintaxis de función")
-function student(name, age, cursosAprobados) {
-    this.name = name
-    this.age = age
-    this.cursosAprobados = cursosAprobados
-}
-student.prototype.aprobarCurso = function (curso) { // Añade la función aprobarCurso al objeto prototipo student
-    this.cursosAprobados.push(curso)
-}
-// Instancia
-const juanita = new student(
-    "Juanita Alejandra",
-    15,
-    ["POO", "Introducción a videojuegos", "Introducción a diseño"]
-)
-console.groupEnd()
+const miguel = new student({
+    name: "Miguel Felix",
+    username: "miguelitofeliz",
+    email: "miguel@mail.com",
+    instagram: "miguelitofelixix"
+})
 
-console.group("Prototipos con la sintaxis de clases")
-class student2 {
-    constructor(name, age, cursosAprobados) { // metodo que se ejecuta
-        this.name = name
-        this.age = age
-        this.cursosAprobados = cursosAprobados
-    }
-
-    aprobarCurso(nuevoCursito) {
-        this.cursosAprobados.push(nuevoCursito)
-    }
-}
-// Instancia
-const miguel = new student2(
-    "Miguel Álvarez",
-    25,
-    [
-        "Análisis de negocios",
-        "Principios de visualización de datos"
-    ]
-)
-console.groupEnd()
-
-console.group("Recibir UN solo parámetro que sea de tipo objeto")
-class student3 {
-    constructor({ name, age, cursosAprobados}) {
-        this.name = name
-        this.age = age
-        this.cursosAprobados = cursosAprobados
-    }
-
-    aprobarCurso(nuevoCursito) {
-        this.cursosAprobados.push(nuevoCursito)
-    }
-}
-//Instancia
-const jose = new  student3({
-    name: "Jose",
-    age: 28,
-    cursosAprobados: [
-        "ES2016",
-        "Creación de videojuegos"
+// Learning Paths
+const desarrolloWeb = new learningPath({
+    name: "Escuela de Desarrollo Web",
+    cursos: [
+        "Computación básica",
+        "Programación básica",
+        "Algoritmos y pensamiento lógico básico"
     ]
 })
-console.groupEnd()
+
+const englishAcademy = new learningPath({
+    name: "Escuela de Platzi English Academy",
+    cursos: [
+        "Estrategias para aprender inglés online",
+        "Inglés para principiantes",
+        "Inglés básico"
+    ]
+})  
