@@ -1,3 +1,5 @@
+// De la clase 5 y 6
+
 const natalia = {
     name: "Natalia",
     age: 20,
