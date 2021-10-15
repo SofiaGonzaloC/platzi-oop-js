@@ -20,6 +20,14 @@ class Student {
             this.points = points;
         this.cursosAprobados = cursosAprobados;
     }
+
+    publicarComentario(commentContent){
+        const comment = new Comment({ // Crea una instancia de la clase Comment
+            content: commentContent,
+            student: this.name
+        })
+        comment.publicar()
+    }
 }
 
 class FreeStudent extends Student {
@@ -60,4 +68,23 @@ class ExpertStudent extends Student {
     }
 }
 
-export {FreeStudent, BasicStudent, ExpertStudent};
+class TeacherStudent extends Student {
+    constructor(props) {
+        super(props); // Permite referenciar al constructor de la clase madre
+    }
+    
+    approveCourse(newCourse) {
+        this.cursosAprobados.push(newCourse)
+    }
+
+    publicarComentario(commentContent){
+        const comment = new Comment({ // Crea una instancia de la clase Comment
+            content: commentContent,
+            student: this.name,
+            studentRole: "Profesor"
+        })
+        comment.publicar()
+    }
+}
+
+export {FreeStudent, BasicStudent, ExpertStudent, TeacherStudent};
