@@ -1,7 +1,19 @@
-import student from './objects/student.js'
-import learningPath from './objects/learningPath.js'
-import course from './objects/course.js'
-import classes from './objects/classes.js'
+// En este archivo se encuentran las instancias de los objetos
+
+import {student} from './objects/student.mjs'
+import {learningPath} from './objects/learningPath.mjs'
+import {course} from './objects/course.mjs'
+import {PlatziClass} from './objects/platziClass.mjs'
+
+// platziClass
+const modulos = new PlatziClass({
+    name: "Módulos de ECMAScript 6",
+    videoID: 456,
+})
+
+modulos.play()
+modulos.pause()
+
 
 // Courses
 const inglesbasico = new course({
