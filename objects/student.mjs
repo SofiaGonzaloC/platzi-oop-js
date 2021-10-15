@@ -1,4 +1,4 @@
-class student{
+export class student{
     constructor({
         name,
         email,
