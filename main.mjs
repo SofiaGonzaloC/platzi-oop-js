@@ -1,6 +1,6 @@
 // En este archivo se encuentran las instancias de los objetos
 
-import {student} from './objects/student.mjs'
+import {FreeStudent, BasicStudent, ExpertStudent} from './objects/student.mjs'
 import {learningPath} from './objects/learningPath.mjs'
 import {course} from './objects/course.mjs'
 import {PlatziClass} from './objects/platziClass.mjs'
@@ -38,12 +38,14 @@ const computacion = new course({
 
 const programbasica = new course({
     name: "Programación básica",
-    teacher: "Freddy Vega"
+    teacher: "Freddy Vega",
+    isFree: true
 })
 
 const algoritmos = new course({
     name: "Algoritmos y pensamiento lógico básico",
-    teacher: "Ana Belisa Martínez"
+    teacher: "Ana Belisa Martínez",
+    lang = "english"
 })
 
 // Learning Paths
@@ -66,7 +68,7 @@ const englishAcademy = new learningPath({
 })
 
 // Students
-const juan = new student({
+const juan = new FreeStudent({
     name: "JuanDC",
     username: "juandc",
     email: "juan@mail.com",
@@ -77,7 +79,7 @@ const juan = new student({
     ]
 })
 
-const miguel = new student({
+const miguel = new BasicStudent({
     name: "Miguel Felix",
     username: "miguelitofeliz",
     email: "miguel@mail.com",

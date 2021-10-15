@@ -1,4 +1,4 @@
-export class Student {
+class Student {
     constructor({
         name,
         email,
@@ -31,7 +31,7 @@ class FreeStudent extends Student {
         if (newCourse.isFree) { // Valida que el curso sea gratis
             this.cursosAprobados.push(newCourse)
         } else {
-            console.warn("Lo siento " + this.name + "este curso no es parte del plan free")
+            console.warn("Lo siento " + this.name + " este curso no es parte del plan free")
         }
     }
 }
@@ -45,7 +45,7 @@ class BasicStudent extends Student {
         if (newCourse.lang !== "english") { // Valida que el curso no este en ingles
             this.cursosAprobados.push(newCourse)
         } else {
-            console.warn("Lo siento " + this.name + "este curso no es parte del plan basic")
+            console.warn("Lo siento " + this.name + " este curso no es parte del plan basic")
         }
     }
 }
@@ -59,3 +59,5 @@ class ExpertStudent extends Student {
         this.cursosAprobados.push(newCourse)
     }
 }
+
+export {FreeStudent, BasicStudent, ExpertStudent};

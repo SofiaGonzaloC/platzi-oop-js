@@ -4,9 +4,9 @@ export class PlatziClass{
         videoID,
         teacher
     }){
-        this.name = name,
-        this.videoID = videoID,
-        this.teacher = teacher
+        this.name = name;
+        this.videoID = videoID;
+        this.teacher = teacher;
     }
 
     play(){
