@@ -4,6 +4,7 @@ import {FreeStudent, BasicStudent, ExpertStudent} from './objects/student.mjs'
 import {learningPath} from './objects/learningPath.mjs'
 import {course} from './objects/course.mjs'
 import {PlatziClass} from './objects/platziClass.mjs'
+import {comment} from './objects/comment.mjs'
 
 // platziClass
 const modulos = new PlatziClass({
@@ -84,4 +85,11 @@ const miguel = new BasicStudent({
     username: "miguelitofeliz",
     email: "miguel@mail.com",
     instagram: "miguelitofelixix"
+})
+
+const freddy = new TeacherStudent({
+    name: "Freddy Vega",
+    username: "freddier",
+    email: "freddy@mail.com",
+    twitter: "freddier"
 })
